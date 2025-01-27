@@ -26,22 +26,40 @@
             height: auto;
             border-radius: 5px;
         }
-    </style>
+    
+    <script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script></style>
 </head>
 <body>
-<nav style="background-color: #333; padding: 10px;">
-    <a href="#" style="color: white; margin: 0 15px; text-decoration: none;">Home</a>
-    <a href="#publications" style="color: white; margin: 0 15px; text-decoration: none;">Publications</a>
-        <a href="#image" style="color: white; margin: 0 15px; text-decoration: none;">Image</a>
+<nav<nav style="background-color: #333; padding: 10px;">
+    <a href="#image" style="color: white; margin: 0 15px; text-decoration: none;" onclick="openTab(event, 'Image')">Image</a>
+    <a href="#about" style="color: white; margin: 0 15px; text-decoration: none;" onclick="openTab(event, 'About')">About</a>
+    <a href="#publications" style="color: white; margin: 0 15px; text-decoration: none;" onclick="openTab(event, 'Publications')">Publications</a>
 </nav>
 
+<div id="Publications" class="tabcontent" style="display: none;">
 <section id="publications" style="padding: 20px;">
     <h2>Publications</h2>
     <p><strong>Single-cell multi-omic and spatial profiling of human kidneys implicates the fibrotic microenvironment in kidney disease progression</strong></p>
     <p>Amin Abedini, Jonathan Levinsohn, Konstantin A. Klotzer, Bernhard Dumoulin, Ziyuan Ma, Julia Fredrick, Poonam Dhillon, Michael S. Balzer, Rojesh Shrestha, Hongbo Liu, Rian Vitale, Andi M. Bergerson, Kishor Devalaraja-Narashimha, Paola Grandi, Tanoy Bhattacharyya, Erding Hu, Steven S. Pullen, Carine M. Boustany-Kari, Fabio Guarnieri, Anil Karihaloo, Daniel Traum, Hanying Yan, Kyle Coleman, Matthew Palmer, Lea Sarov-Blat, Lori Morton, Christopher A. Hunter, Klaus H. Kaestner, Mingyao Li, Katalin Susztak</p>
     <p><em>Nature Genetics (2024)</em></p>
 </section>
+    </div>
 
+<div id="About" class="tabcontent" style="display: none;">
   <section id="about" style="padding: 20px;">
   
         <h1>Katalin Susztak, M.D., Ph.D.</h1>
@@ -56,9 +74,13 @@
         <p>Dr. Susztak has been the recipient of the 2011 Young Investigator Award of the American Society of Nephrology and American Heart Association, one of the most prestigious awards given to researchers under the age of 41 in the field of nephrology. In 2021 Dr Susztak was recipient of the Alfred Newton Richards Award from the International Society of Nephrology that recognizes outstanding basic research in fields relevant to nephrology. Her laboratory is supported by the National Institute of Health, the American Diabetes Association, the Juvenile Diabetes Research Foundation, and private sources.</p>
         <p>Susztak's discoveries span genetics, genomics, epigenetics, molecular biology, physiology and nephrology, and have enormous translational relevance and considerable therapeutic potential.</p>
         <p>More information can be found on her <a href="https://www.med.upenn.edu/susztaklab<
-<section</section> id="image" style="padding: 20px;">
+<section</section> i
+ <div id="Image" class="tabcontent" style="display: none;">
+                                                   </div>d="image" style="padding: 20px;">
     <img src="katalin_susztak_02.png" alt="Katalin Susztak" style="max-width: 100%; height: auto;">
-</section>div class="container">/publications.html">publications page</a> and you can follow her on Twitter <a href="https://twitter.com/ksusztak">@ksusztak</a>.</p>
+</section>div
+    </dic
+    </div>lass="cntainer">/publications.html">publications page</a> and you can follow her on Twitter <a href="https://twitter.com/ksusztak">@ksusztak</a>.</p>
    
 </body>
 </html>
